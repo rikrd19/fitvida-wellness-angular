@@ -1,0 +1,28 @@
+@use '@angular/material' as mat;
+
+@mixin hero-card-theme($theme) {
+    .custom-hero-card {
+        // 95 es un tono muy claro para el fondo (válido)
+        background-color: mat.get-theme-color($theme, primary, 95);
+        // Cambiamos 500 por 40 (que es el tono estándar intermedio en M3)
+        border: 2px solid mat.get-theme-color($theme, primary, 40);
+        padding: 24px;
+        border-radius: 12px;
+        margin: 20px 0;
+        text-align: center;
+
+        h3 {
+            // Cambiamos 800 por 30 (un tono oscuro para texto)
+            color: mat.get-theme-color($theme, primary, 30);
+            margin-top: 0;
+        }
+
+        .price-tag {
+            // Cambiamos 500 por 40 para el naranja
+            color: mat.get-theme-color($theme, tertiary, 40);
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}

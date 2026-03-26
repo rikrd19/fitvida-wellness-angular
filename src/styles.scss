@@ -1,0 +1,63 @@
+@use '@angular/material' as mat;
+
+// Definición del tema de FitVida (Cumple Criterio 3)
+$fitvida-theme: mat.define-theme((color: (theme-type: light,
+        primary: mat.$green-palette,
+        tertiary: mat.$orange-palette,
+      ),
+      typography: (brand-family: 'Roboto', // Para títulos
+        plain-family: 'Roboto', // Para cuerpo de texto (Cambiado de font-family)
+      ),
+      density: (scale: 0,
+      ),
+    ));
+
+// Aplicación global (Criterio 7)
+html {
+  height: 100%;
+  @include mat.all-component-themes($fitvida-theme);
+  @include mat.typography-hierarchy($fitvida-theme);
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  // Usamos las variables de sistema generadas por el tema
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
+
+// Clases de utilidad
+.spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  padding: 24px;
+}
+
+.hero-section {
+  padding: 80px 24px;
+  text-align: center;
+  background-color: #f5f5f5; // Un gris muy tenue para resaltar el blanco de las futuras tarjetas
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2e7d32; // Verde primario
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+}
+
+// Importamos el archivo del componente
+@import './app/components/hero-card/hero-card.scss';
+
+// Aplicamos el mixin pasándole nuestro tema (Criterio 6)
+@include hero-card-theme($fitvida-theme);
