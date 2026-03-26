@@ -1,6 +1,8 @@
 # FitVida Wellness Studio - Angular App
 
-Proyecto desarrollado para la **Práctica 12 de Angular y Material**. 
+Proyecto desarrollado para la **Práctica 12 de Angular y Material - FitVida Wellness Studio**. 
+
+**Alumno:** Ricardo Luis Avila Bazalar
 
 ## Características
 - **Angular 21** con componentes Standalone.
@@ -16,7 +18,17 @@ Proyecto desarrollado para la **Práctica 12 de Angular y Material**.
 5. Formulario de contacto con validación visual.
 6. Footer corporativo.
 
-## Instalación
-1. Clonar el repositorio.
-2. Ejecutar `npm install`.
-3. Iniciar con `ng serve`.
+## Instrucciones para ejecutar el proyecto
+
+1.  **Instalar las dependencias de Node.js:**
+    ```bash
+    npm install
+    ```
+2.  **Iniciar con `ng serve`:**
+    ```bash
+    ng serve
+    ```
+
+
+## Captura de Pantalla
+![FitVida Wellness Studio](img/image.png)
