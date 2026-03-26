@@ -8,14 +8,45 @@
 <main>
   <section class="hero-section">
     <h1>Transforma tu cuerpo, equilibra tu mente</h1>
-    <p>
-      En FitVida Wellness Studio, diseñamos planes personalizados para que alcances tu mejor versión
-      en un ambiente de paz y energía.
-    </p>
+    <p>Planes personalizados en un ambiente de paz y energía.</p>
     <button mat-raised-button color="tertiary">EMPEZAR AHORA</button>
   </section>
+
+  <div class="container">
+    <app-hero-card></app-hero-card>
+
+    <h2 class="section-title">Nuestras Disciplinas</h2>
+    <div class="services-grid">
+      <mat-card class="service-card" *ngFor="let s of services">
+        <mat-card-header>
+          <mat-card-title>{{ s.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ s.desc }}</p>
+          <p class="price">Desde {{ s.price }}/mes</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <section class="contact-section">
+      <h2>Reserva tu clase de prueba</h2>
+      <form class="contact-form">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre completo</mat-label>
+          <input matInput placeholder="Ej. Juan Pérez">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email de contacto</mat-label>
+          <input matInput type="email" placeholder="hola@fitvida.com">
+        </mat-form-field>
+
+        <button mat-flat-button color="primary">ENVIAR SOLICITUD</button>
+      </form>
+    </section>
+  </div>
 </main>
 
-<div class="container">
-  <app-hero-card></app-hero-card>
-</div>
+<footer class="fitvida-footer">
+  <p>© 2026 FitVida Wellness Studio - Tu espacio de bienestar en Angular Material</p>
+</footer>
